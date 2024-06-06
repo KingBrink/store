@@ -1,0 +1,78 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f9fa; /* Change this to your desired background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+}
+
+body{
+    background-color: #f8f8f8;
+}
+
+.logo img {
+    width: 75px;
+}
+
+#navnav{
+    background-color: #FF8F00;
+    background-image: linear-gradient(yellow );
+}
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333; 
+    margin-right: 20px; 
+    font-weight: bolder;
+}
+
+.navbar a:hover {
+    color: #26355D; 
+    text-decoration: underline;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.content {
+    margin-top: 15%;
+    margin-left: 10%;
+}
+
+.content h1{
+    color: black;
+    font-size: 60px;
+}
+
+.content h2 {
+    color: orangered;
+    font-size: 20px;
+}
+
+.content .see {
+    font-size: 15px;
+    color: orangered;
+    background-color: black;
+    border-radius: 30%;
+}
+
+.content .see:hover{
+    color: #26355D;
+    transform: scale(1.2);
+}
+
+.backimage{
+    background-image: url(/pineapple.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+}
+
+img {
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: center;
+}
