@@ -7,8 +7,13 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
 }
 
-body{
+:is(body) {
     background-color: #f8f8f8;
+    display: grid;
+}
+body {
+    grid-template-rows: auto minmax(100%, 100dvh)
+    auto;
 }
 
 .logo img {
@@ -17,7 +22,6 @@ body{
 
 #navnav{
     background-color: #FF8F00;
-    background-image: linear-gradient(yellow );
 }
 .navbar {
     display: flex;
@@ -47,7 +51,7 @@ body{
     font-size: 60px;
 }
 
-.content h2 {
+.content h3 {
     color: orangered;
     font-size: 20px;
 }
@@ -75,4 +79,8 @@ img {
     aspect-ratio: 1;
     object-fit: cover;
     object-position: center;
+}
+
+:is(h2, footer p){
+    text-align: center;
 }
