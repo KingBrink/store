@@ -21,7 +21,7 @@ body {
 }
 
 #navnav{
-    background-color: #FF8F00;
+    background-color: #388E3C;
 }
 .navbar {
     display: flex;
@@ -68,12 +68,12 @@ body {
     transform: scale(1.2);
 }
 
-.backimage{
+/* .backimage{
     background-image: url(/pineapple.jpg);
     background-position: center;
     background-size: cover;
     height: 60vh;
-}
+} */
 
 img {
     aspect-ratio: 1;
@@ -83,4 +83,8 @@ img {
 
 :is(h2, footer p){
     text-align: center;
+}
+
+.card {
+    width: 18rem;
 }
