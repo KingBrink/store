@@ -8,11 +8,11 @@
 }
 
 :is(body) {
-    background-color: #f8f8f8;
+    background-color: #F7FFE5;
     display: grid;
 }
 body {
-    grid-template-rows: auto minmax(100%, 100dvh)
+    grid-template-rows: auto minmax(100dvh, 100%)
     auto;
 }
 
@@ -21,7 +21,7 @@ body {
 }
 
 #navnav{
-    background-color: #388E3C;
+    background-color: #A0C49D;
 }
 .navbar {
     display: flex;
@@ -87,4 +87,119 @@ img {
 
 .card {
     width: 18rem;
+    margin-inline: auto;
+    padding: 10px;
+    background-color: #E1ECC8;
+    
+}
+/* Section styles */
+.contact {
+    text-align: center;
+    padding: 50px 0;
+}
+
+/* Heading styles */
+.heading {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-family: 'Arial Black', sans-serif;
+    color: #333;
+}
+
+/* Map styles */
+.map {
+    width: 80%;
+    height: 300px;
+    margin: 0 auto 30px;
+}
+
+/* Form styles */
+.form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Input styles */
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Textarea styles */
+textarea.form-control {
+    resize: none;
+}
+
+/* Button styles */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+/* Contact details styles */
+.deats {
+    margin-top: 20px;
+}
+
+.deats a, .deats text {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Font Awesome icon styles */
+.fa {
+    margin-right: 5px;
+}
+
+.aboutinfo {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+
+.aboutimg {
+    width: 400px; 
+    height: auto;
+    margin-right: 20px; 
+    transition: transform 0.3s ease; 
+}
+
+.aboutpar {
+    flex:1 ; 
+}
+
+.aboutpar p {
+    font-size: 18px; 
+    line-height: 1.6; 
+    transition: color 0.3s ease; 
+}
+
+/* Hover effect for image */
+.aboutimg:hover {
+    transform: scale(1.05); 
+}
+
+/* Hover effect for paragraphs */
+.aboutpar p:hover {
+    color: darkblue; 
 }
