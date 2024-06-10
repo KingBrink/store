@@ -18,9 +18,9 @@ function adminContent(args){
         args?.forEach((product, i)=>{
             tableContent.innerHTML +=`
             <tr>
-                <td>${product.name}</td>
-                <td>${product.detail}</td>
-                <td><img src="${product.image}" alt="${product.id}" class="img-thumbnail h-25 w-25"></td>
+                <td>${product.productName}</td>
+                <td>${product.description}</td>
+                <td><img src="${product.img_url}" alt="${product.id}" class="img-thumbnail h-25 w-25"></td>
                 <td>R${product.amount}</td>
                 <td> 
                 <div>
@@ -36,9 +36,9 @@ function adminContent(args){
                         <div class="modal-body">
                           <form>
                           <div class="container">
-                          <input class="form-control m-2" type="text" placeholder="Enter a Product Name" value="${product.name}" name ="admin-name" id="admin-name${product.id}" required>
-                          <input class="form-control m-2" type="text" placeholder="Enter Image URL" value="${product.image}" name="admin-image" id="admin-image${product.id}" required>
-                          <textarea class="form-control m-2" placeholder="Enter your Product details" required name="admin-details" id="admin-details${product.id}">${product.detail}</textarea>
+                          <input class="form-control m-2" type="text" placeholder="Enter a Product Name" value="${product.productName}" name ="admin-name" id="admin-name${product.id}" required>
+                          <input class="form-control m-2" type="text" placeholder="Enter Image URL" value="${product.img_url}" name="admin-image" id="admin-image${product.id}" required>
+                          <textarea class="form-control m-2" placeholder="Enter your Product details" required name="admin-details" id="admin-details${product.id}">${product.description}</textarea>
                           <input class="form-control m-2" type="number" placeholder="Enter the Product Amount" value="${product.amount}" name="admin-amount" id="admin-amount${product.id}" required>
                           </div>
                           </form>
@@ -71,10 +71,10 @@ adminContent(products)
 function UpdateProduct(item, index){
     try{
         this.id = item.id;
-        this.name = document.querySelector(`#admin-name${item.id}`).value;
-        this.detail = document.querySelector(`#admin-detail${item.id}`);
+        this.productName = document.querySelector(`#admin-name${item.id}`).value;
+        this.description = document.querySelector(`#admin-detail${item.id}`);
         this.amount = document.querySelector(`#admin-image${item.id}`).value;
-        this.image = document.querySelector(`#admin${item.id}`).value;
+        this.img_url = document.querySelector(`#admin${item.id}`).value;
 
         products[index] = Object.assign({}, this);
         localStorage.setItem('products',JSON.stringify(products));
@@ -121,9 +121,9 @@ adminSavedProduct.addEventListener('click', () => {
     try{
         products.push({
             name: document.querySelector('#addName').value,
-            detail: document.querySelector('#addDetail').value,
+            description: document.querySelector('#addDetail').value,
             amount: document.querySelector('#addAmount').value,
-            image: document.querySelector('#addImage').value,
+            img_url: document.querySelector('#addImage').value,
         });
         localStorage.setItem('products', JSON.stringify(products));
         adminContent(products);
